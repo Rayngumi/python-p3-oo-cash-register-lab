@@ -20,10 +20,8 @@ class CashRegister:
 
   def void_last_transaction(self):
     if len(self.items) == 0:
-      self.total = 0
       print("There are no items to void.")
-    else:
-      self.total -= self.total / len(self.items)
-      self.items.pop()
+      return 
 
-      
+    self.total -= self.total / len(self.items)
+    self.items.pop()
